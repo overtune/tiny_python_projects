@@ -100,3 +100,9 @@ Handle output to file if specified else to print:
 ```
 out_fh = open(args.outfile, 'wt') if args.outfile else sys.stdout
 ```
+
+Create a dictionary with a loop:
+
+```
+lookup = { line[0].upper(): line.rstrip() for line in fh }
+```
