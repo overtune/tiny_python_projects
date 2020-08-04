@@ -4,6 +4,12 @@
 
 - https://docs.python.org/3/
 
+## Tips
+
+- The nargs (number of arguments) option to argparse allows you to validate the number of arguments from the user. The asterisk ('*') means zero or more, whereas '+' means one or more.
+- If you define an argument using type=argparse.FileType('rt'), argparse will validate that the user has provided a readable text file and will make the value available in your code as an open file handle.
+- You can read and write from the standard in/out file handles by using sys.stdin and sys.stdout.
+
 ## Tools
 
 Run tests:
