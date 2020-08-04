@@ -62,3 +62,35 @@ Get help in repl:
 python3
 help(str)
 ```
+
+Read a file (reads the entire file into memory):
+
+```
+fh = open(text)
+text = fh.read()
+fh.close()
+```
+
+Read a file (without reading the entire file into memory):
+
+```
+fh = open(text)
+for line in fh:
+	print(line.upper())
+fh.close()
+```
+
+Handle text that might be a file of a string:
+
+```
+if os.path.isfile(args.text):
+	args.text = open(args.text)
+else:
+	args.text = io.StringIO(args.text + '\n')
+```
+
+Handle output to file if specified else to print:
+
+```
+out_fh = open(args.outfile, 'wt') if args.outfile else sys.stdout
+```
