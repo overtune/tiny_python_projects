@@ -106,3 +106,11 @@ Create a dictionary with a loop:
 ```
 lookup = { line[0].upper(): line.rstrip() for line in fh }
 ```
+
+Change characters in a string (non-deterministic) (good for speed and when working with large files:
+```
+new_text = ''
+for char in args.text:
+	new_text += random.choice(alpha) if random.random() <= args.mutations else char
+print(new_text)
+```
